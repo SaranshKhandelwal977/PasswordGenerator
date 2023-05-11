@@ -1,0 +1,175 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#wrapper{
+    height: 100vh;
+    width: 100vw;
+    overflow-y: auto;
+    overflow-x: hidden;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    color: white;
+    background-image: linear-gradient(45deg, rgb(231, 167, 7), rgb(193, 106, 0));
+}
+.con{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+.copy-img{
+    width: 23px;
+    height: 23px;
+}
+.top{
+    display: flex;
+    justify-content: space-between;
+    width: 19%;
+    margin-top: 10px;
+    padding: 10px 8px;
+    border: 1px solid black;
+    border-bottom: 7px solid rgb(128, 0, 128);
+    background-color: rgba(0, 0, 0, 0.436);
+    border-radius: 8px;
+}
+.password-random, .btn-con{
+    background: none;
+    border: none;
+}
+.btn-con{
+    position: relative;
+}
+.password-random::placeholder{
+    opacity: 1;
+    color: white;
+    font-weight: bold;
+}
+.password-random{
+    width: 100%;
+    /* background-color: transparent; */
+    /* padding: 1.15rem 1rem; */
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    /* line-height: 30px; */
+    /* letter-spacing: 1px; */
+    padding-right: 3.25rem;
+    border:none;
+}
+.data{
+    width: 19%;
+    background-color: rgba(0, 0, 0, 0.436);
+    margin-top: 10px;
+    padding: 30px 20px;
+    border-radius: 8px;
+    /* height: 300px; */
+
+}
+.pass-len{
+    display: flex;
+    justify-content: space-between;
+}
+.slide{
+    appearance: none;
+    width: 100%;
+    /* height: 10px; */
+    background-color: rgba(143, 8, 143, 0.521);
+    background-image: linear-gradient(rgb(219, 2, 219), rgb(134, 0, 134));
+    cursor: pointer; 
+    border-radius: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+    height: 0.75rem;
+    background-repeat: no-repeat;
+
+}
+
+.slide::-webkit-slider-thumb{
+    position: relative;
+    appearance: none;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    background-color: yellow;
+    cursor: pointer;
+    margin-top: -3px;
+    box-shadow: 0px 0px 20px 0px rgba(255,229, 61, 0.50);
+    transition: all 100ms ease-in;
+}
+
+.slide:focus{
+    outline: 3px solid yellow;
+}
+.slide::-webkit-slider-thumb:hover{
+    background-color: rgb(23, 0, 23);
+    outline:2px solid yellow;
+}
+.strength{
+    display: flex;
+    justify-content: space-between;
+}
+
+.copyMsg{
+    position: absolute;
+    top: -25px;
+    left: -25px;
+    background-color: rgba(0, 0, 0, 0.819);
+    color: aliceblue;
+    padding: 0.2rem 1rem;
+    border-radius: 12px;
+    opacity: 0;
+    transform: scale(0);
+}
+.copyMsg.active{
+    opacity: 1;
+    transform: scale(1);
+}
+.box{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 0 0 20px rgb(255, 255, 255);
+
+}
+.generate{
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-bottom: 8px solid yellow;
+    background-color: rgb(179, 2, 179);
+    border-radius: 8px;
+    color: white;
+    font-weight: 600;
+
+}
+
+.check input{
+    appearance: none; 
+    width: 20px;
+    height: 20px;
+    border: 1px solid cyan;
+    cursor: pointer;
+    position: relative;
+    border-radius: 0.35rem;
+}
+
+.check input:checked{
+    background-color: cyan;
+}
+
+.check input:checked::before{
+    content: '✓';
+    position: absolute;
+    color: white;
+    font-size: 1.05rem;
+    font-weight: 600;
+    left: 50%;
+    top: -5px;
+    transform: translateX(-50%);
+}
